@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Ehsan Jamal | AI & Full-Stack Developer</title>
+
+<meta name="description" content="Final-year Computer Science student specializing in AI, Computer Vision and Full-Stack Development.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ehsan Jamal | AI & Full-Stack Developer">
+<meta property="og:description" content="Computer vision, deep learning and full-stack projects.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234F46E5'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'%3EEJ%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --bg:#FFFFFF;
+  --alt:#F6F7F9;
+  --ink:#0F172A;
+  --mute:#556070;
+  --acc:#4F46E5;
+  --accink:#FFFFFF;
+  --line:#E3E7EE;
+  --card:#FFFFFF;
+
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1020;--alt:#10172B;--ink:#E8ECF5;--mute:#98A3B8;--acc:#8B93FF;--accink:#0B1020;--line:#222B45;--card:#121A30}}
+
+:root[data-theme="dark"]{--bg:#0B1020;--alt:#10172B;--ink:#E8ECF5;--mute:#98A3B8;--acc:#8B93FF;--accink:#0B1020;--line:#222B45;--card:#121A30}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.7 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0;line-height:1.15;letter-spacing:-.02em}p{margin:0}a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+.skip{position:absolute;left:-999px}
+.skip:focus{left:12px;top:12px;background:var(--acc);color:var(--accink);padding:8px 12px;border-radius:8px;z-index:100}
+
+header.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-weight:700;text-decoration:none;font-size:18px}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{text-decoration:none;color:var(--mute);font-size:14.5px;font-weight:500;padding:6px 12px;border-radius:8px}
+nav a:hover,nav a.on{color:var(--ink);background:var(--alt)}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;width:36px;height:36px;cursor:pointer;font-size:15px}
+
+.hero{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;padding:88px 0 72px}
+
+.photo{width:180px;height:180px;border-radius:50%;overflow:hidden;border:3px solid var(--line);background:var(--alt);display:grid;place-items:center;position:relative}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .fb{position:absolute;inset:0;display:none;place-items:center;font:700 56px Inter;color:var(--acc)}
+.photo.nophoto .fb{display:grid}
+
+.chip{display:inline-block;font-size:13px;font-weight:500;color:var(--acc);border:1px solid var(--line);background:var(--alt);padding:4px 12px;border-radius:999px;margin-bottom:20px}
+h1{font-size:clamp(34px,6vw,60px);font-weight:800}
+.lead{color:var(--mute);font-size:18px;margin:20px 0 28px;max-width:58ch}
+
+.btn{display:inline-flex;align-items:center;padding:11px 20px;border-radius:9px;text-decoration:none;font:600 15px Inter,sans-serif;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.p{background:var(--acc);border-color:var(--acc);color:var(--accink)}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+
+section{padding:80px 0}section.alt{background:var(--alt);border-block:1px solid var(--line)}
+.lab{font-size:13px;font-weight:600;color:var(--acc);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+h2{font-size:clamp(26px,4vw,36px);margin-bottom:32px;font-weight:700}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px;margin-bottom:20px}
+.proj .meta{font-size:14px;color:var(--mute);margin:6px 0 16px}
+.proj h3{font-size:22px}.proj ul{margin:0 0 6px;padding-left:20px;color:var(--mute)}.proj li{margin:7px 0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tags span{font-size:13px;font-weight:500;border:1px solid var(--line);border-radius:6px;padding:2px 10px;background:var(--alt)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+.card h3{font-size:17px;margin-bottom:6px}.card p{color:var(--mute);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.item{padding:0 0 20px;margin-bottom:20px;border-bottom:1px solid var(--line)}.item:last-child{border:0;margin:0;padding:0}
+.item small{display:block;color:var(--mute);font-size:14px}
+
+form{display:grid;gap:14px;max-width:560px}
+label{font-size:14px;font-weight:500;display:grid;gap:6px}
+input,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:9px;padding:11px 13px;width:100%}
+textarea{min-height:130px;resize:vertical}
+#st{font-size:15px;min-height:1.4em;color:var(--mute)}
+.hp{position:absolute;left:-9999px}
+.alt-c{margin-top:22px;color:var(--mute);font-size:15px}.alt-c a{color:var(--acc);font-weight:500}
+footer{padding:32px 0;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+@media(max-width:760px){
+  .hero{grid-template-columns:1fr;padding:56px 0 40px}
+  .two{grid-template-columns:1fr}
+  nav li.h{display:none}
+}
+@media print{header.top,#theme,form{display:none}}
+</style>
+</head>
+
+<body>
+
+<a href="#main" class="skip">Skip to content</a>
+
+<header class="top"><div class="wrap bar">
+  <a class="logo" href="#">Ehsan Jamal</a>
+  <nav aria-label="Primary"><ul>
+
+    <li class="h"><a href="#projects">Projects</a></li>
+    <li class="h"><a href="#skills">Skills</a></li>
+    <li class="h"><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><button id="theme" aria-label="Toggle dark mode">◐</button></li>
+  </ul></nav>
+</div></header>
+
+<main id="main">
+
+<div class="wrap"><div class="hero">
+
+  <div class="photo" id="photo">
+    <img src="ehsan.jpg" alt="Portrait of Ehsan Jamal" width="180" height="180">
+    <span class="fb" aria-hidden="true">EJ</span>
+  </div>
+  <div>
+
+    <span class="chip">Final-year Computer Science student</span>
+    <h1>AI and Full-Stack Developer.</h1>
+    <p class="lead">I specialize in deep learning, computer vision and web development. I take projects end to end: data curation, model architecture, training and deployment.</p>
+    <div class="cta">
+      <a class="btn p" href="#projects">View projects</a>
+      <a class="btn" href="#contact">Contact me</a>
+
+      <a class="btn" href="https://github.com/ehsanjamal" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/ehsan-jamal-8670a3274" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</div></div>
+
+<section id="projects" class="alt"><div class="wrap">
+  <div class="lab">Projects</div><h2>Selected work</h2>
+
+  <article class="proj">
+    <h3>Smart Plant Disease Detection for Sustainable Farming</h3>
+    <p class="meta">Lead Developer · Final Year Project (Group) · 2026</p>
+    <ul>
+      <li>Curated a 24-class, Sindh-relevant crop disease dataset (Cotton, Sugarcane, Mango, Rice, Wheat; ~15,250 images) by merging 4 Kaggle datasets.</li>
+      <li>Designed and trained an EfficientNetB3 + Squeeze-and-Excitation attention CNN, reaching ~94.5% validation accuracy with a two-phase (frozen + fine-tuning) pipeline.</li>
+      <li>Added data augmentation (brightness, rotation, color-shift) to improve robustness on real field images.</li>
+      <li>Built and deployed a Flask web app with HTML/CSS/JavaScript frontend for instant prediction and sustainable treatment guidance across all 24 classes.</li>
+      <li>Produced system architecture, flowcharts and technical documentation for the formal FYP evaluation.</li>
+    </ul>
+    <div class="tags"><span>Python</span><span>EfficientNetB3</span><span>Attention (SE)</span><span>Flask</span><span>JavaScript</span><span>Kaggle GPU</span></div>
+  </article>
+
+  <article class="proj">
+    <h3>Ali Jan Communication</h3>
+    <p class="meta">E-commerce website</p>
+    <ul><li>Online store with WhatsApp-based ordering, built with Node.js, Express and MongoDB.</li></ul>
+    <div class="tags"><span>Node.js</span><span>Express</span><span>MongoDB</span></div>
+  </article>
+
+  <article class="proj">
+    <h3>Hyperspectral Remote Sensing Analysis</h3>
+    <p class="meta">Independent Applied Research · NASA ARSET coursework</p>
+    <ul>
+      <li>Completed NASA ARSET training in remote sensing, including a module on hyperspectral data for land and coastal systems.</li>
+      <li>Extracted and evaluated hyperspectral datasets, writing custom classification and processing scripts for high-dimensional spatial data.</li>
+    </ul>
+    <div class="tags"><span>Python</span><span>Remote Sensing</span><span>Image Classification</span></div>
+  </article>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="lab">Skills</div><h2>Technical skills</h2>
+
+  <div class="grid">
+    <div class="card"><h3>Languages</h3><p>Python, C++, Java, HTML5, CSS3, JavaScript</p></div>
+    <div class="card"><h3>Machine Learning and AI</h3><p>CNNs, transfer learning (EfficientNetB3, MobileNetV2), Squeeze-and-Excitation attention, computer vision, fine-tuning and evaluation, data augmentation</p></div>
+    <div class="card"><h3>Full-Stack</h3><p>Flask (routes, image upload, prediction logic), HTML5, CSS3, JavaScript</p></div>
+    <div class="card"><h3>Tools and Platforms</h3><p>Google Colab, Kaggle, Jupyter Notebook, Git/GitHub, LaTeX</p></div>
+    <div class="card"><h3>Domain Knowledge</h3><p>Precision agriculture, remote sensing and hyperspectral image analysis</p></div>
+  </div>
+</div></section>
+
+<section id="education" class="alt"><div class="wrap">
+  <div class="lab">Education</div><h2>Education and certifications</h2>
+  <div class="two">
+    <div>
+      <div class="item"><b>Bachelor of Science in Computer Science</b><small>National University of Modern Languages (NUML) · Expected 2026</small><small>AI, Data Structures and Algorithms, OOP, Database Management Systems, Software Engineering</small></div>
+      <div class="item"><b>Intermediate (ICS)</b><small>Dr. A.Q. Khan College, Islamabad · 2022</small></div>
+      <div class="item"><b>Matriculation (Science)</b><small>Dr. A.Q. Khan School, Islamabad · 2020</small></div>
+    </div>
+    <div>
+      <div class="item"><b>Hyperspectral Data for Land and Coastal Systems</b><small>NASA ARSET · August 2026</small></div>
+      <div class="item"><b>Fundamentals of Remote Sensing</b><small>NASA ARSET</small></div>
+      <div class="item"><b>Developing Sustainable Earth Science Applications</b><small>NASA ARSET</small></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="lab">Contact</div><h2>Get in touch</h2>
+
+  <form id="cf">
+    <label>Your name<input id="n" required autocomplete="name"></label>
+    <label>Your email<input id="e" type="email" required autocomplete="email"></label>
+    <label>Message<textarea id="m" required></textarea></label>
+
+    <input type="checkbox" id="bot" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="cta">
+      <button class="btn p" type="submit" id="send">Send message</button>
+    </div>
+
+    <p id="st" role="status" aria-live="polite"></p>
+  </form>
+
+  <p class="alt-c">Or write directly to <a href="mailto:ehsanp756@gmail.com">ehsanp756@gmail.com</a> · <a href="#" id="copy">Copy email</a></p>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Ehsan Jamal</span><span>Tando Muhammad Khan, Sindh, Pakistan</span></div></footer>
+
+<script>
+(function(){
+  var r = document.documentElement;
+  var $ = function(id){ return document.getElementById(id) };
+  var TO = 'ehsanp756@gmail.com';
+
+  var img = document.querySelector('#photo img');
+  function noPhoto(){ $('photo').classList.add('nophoto'); img.style.display = 'none'; }
+  img.addEventListener('error', noPhoto);
+  if (img.complete && img.naturalWidth === 0) noPhoto();
+
+  try { var t = localStorage.getItem('theme'); if (t) r.setAttribute('data-theme', t); } catch(e){}
+  $('theme').onclick = function(){
+    var cur = r.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    r.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch(e){}
+  };
+
+  var links = document.querySelectorAll('nav a[href^="#"]');
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) links.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id); });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  document.querySelectorAll('section[id]').forEach(function(s){ spy.observe(s); });
+
+  var KEY = 'f3d1a6b7-c083-47c3-bd20-4433b752d183';
+  $('cf').onsubmit = function(ev){
+    ev.preventDefault();
+    var btn = $('send'), st = $('st');
+    if (KEY === 'YOUR_ACCESS_KEY') { st.textContent = 'Form is not set up yet. Please email me directly.'; return; }
+    btn.disabled = true; btn.textContent = 'Sending...';
+    st.textContent = '';
+    var n = $('n').value.trim();
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key: KEY,
+        subject: 'Portfolio message from ' + n,
+        name: n,
+        email: $('e').value.trim(),
+        message: $('m').value.trim(),
+        botcheck: $('bot').checked
+      })
+    }).then(function(r){ return r.json(); }).then(function(d){
+      if (d.success) { st.textContent = 'Thanks! Your message was sent.'; $('cf').reset(); }
+      else { st.textContent = 'Something went wrong. Please email me directly.'; }
+    }).catch(function(){
+      st.textContent = 'Network error. Please email me directly.';
+    }).finally(function(){
+      btn.disabled = false; btn.textContent = 'Send message';
+    });
+  };
+
+  $('copy').onclick = function(ev){
+    ev.preventDefault(); var a = this;
+    try { navigator.clipboard.writeText(TO).then(function(){ a.textContent = 'Copied ✓'; setTimeout(function(){ a.textContent = 'Copy email'; }, 1800); }).catch(function(){ a.textContent = 'Copy failed'; }); } catch(e){ a.textContent = 'Copy failed'; }
+  };
+})();
+</script>
+</body>
+</html>
